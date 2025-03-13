@@ -1,6 +1,9 @@
-# Super Foods Website
+![Screenshot (473)](https://github.com/user-attachments/assets/9b6da9f2-841f-4988-8eb0-83807047afa8)# Super Foods Website
 
 A modern e-commerce website for Super Foods, built with React and Tailwind CSS.
+
+![Screenshot (473)](https://github.com/user-attachments/assets/5d01b505-a799-4a16-bd5e-98ea57352676)
+
 
 ## Features
 
