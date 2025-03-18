@@ -1,101 +1,49 @@
-import { useState, useEffect } from 'react';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import ProductList from '../components/ProductList';
 import Who_We_Are from '../components/Who_We_Are';
-import { Link } from 'react-router-dom';
-
-const slides = [
-  {
-    image: "https://images.unsplash.com/photo-1576867757603-05b134ebc379?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
-    title: "Discover the Power of Moringa!",
-    description: "Nutrient Rich Super-Food - Energize Your Life with Moringa's Natural Vitality!"
-  },
-  {
-    image: "https://images.unsplash.com/photo-1576867757603-05b134ebc379?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
-    title: "Energy & Wellness, they do excel!",
-    description: "Experience the natural goodness of our premium products."
-  }
-];
 
 function Home() {
-  const [currentSlide, setCurrentSlide] = useState(0);
-
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % slides.length);
-  };
-
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
-  };
-
-  // Auto-slide every 3 seconds
-  useEffect(() => {
-    const interval = setInterval(nextSlide, 3000);
-    return () => clearInterval(interval); // Cleanup interval on unmount
-  }, []);
 
   return (
     <div>
       {/* Hero Slider */}
-      <div className="relative h-[600px]">
+      <div className="relative h-screen">
         <div className="absolute inset-0">
           <img
-            src={slides[currentSlide].image}
-            alt={slides[currentSlide].title}
-            className="w-full h-full object-cover transition-opacity duration-500"
+            src="/src/assets/bg.webp"
+            alt="Empowering a Healthier World"
+            className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-black bg-opacity-40" />
+          <div className="absolute inset-0 bg-black bg-opacity-60" />
         </div>
 
         <div className="absolute inset-0 flex items-center justify-center text-white">
-          <div className="text-center max-w-2xl px-4">
-            <h1 className="text-4xl font-bold mb-4">{slides[currentSlide].title}</h1>
-            <p className="text-lg mb-8">{slides[currentSlide].description}</p>
+          <div className="text-center max-w-3xl px-4">
+
+            <h1 className="text-4xl md:text-5xl font-bold mb-2 text-white shadow-lg">
+              Empowering a Healthier World,
+            </h1>
+
+            <p className="text-2xl md:text-3xl mb-8 text-white shadow-lg">
+              One Superfood at a Time!
+            </p>
+
             <Link to="/about">
-              <button className="bg-green-600 text-white px-8 py-3 rounded-lg hover:bg-green-700">
-                Learn More
+              <button className="bg-green-600 text-white px-10 md:px-12 py-4 rounded-lg font-bold hover:bg-green-800 hover:scale-105 transition duration-300 transform">
+                Join Our Movement →
               </button>
             </Link>
+
+            {/* Descriptive Paragraph placed correctly as per the provided image */}
+            <div className="mt-8 inline-block bg-black bg-opacity-50 px-6 py-4 rounded">
+              <p className="italic text-lg md:text-xl text-white shadow-lg">
+                We are dedicated to providing nutritious superfoods that positively impact your health and well-being—making it accessible to everyone, every day.
+              </p>
+            </div>
+
           </div>
-        </div>
-
-        {/* Navigation Buttons */}
-        <button
-          onClick={prevSlide}
-          className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/30 p-2 rounded-full"
-        >
-          <ChevronLeft size={24} className="text-white" />
-        </button>
-        <button
-          onClick={nextSlide}
-          className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/30 p-2 rounded-full"
-        >
-          <ChevronRight size={24} className="text-white" />
-        </button>
-
-        {/* Slide Indicators */}
-        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2">
-          {slides.map((_, index) => (
-            <button
-              key={index}
-              className={`w-2 h-2 rounded-full ${index === currentSlide ? 'bg-white' : 'bg-white/50'}`}
-              onClick={() => setCurrentSlide(index)}
-            />
-          ))}
         </div>
       </div>
-
-      {/* Products Section */}
-      {/* <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">Our Products</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {products.map((product) => (
-              <ProductCard key={product.id} product={product} />
-            ))}
-          </div>
-        </div>
-      </section> */}
 
       {/* Products Section */}
       <ProductList />
