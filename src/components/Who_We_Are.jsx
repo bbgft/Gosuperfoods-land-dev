@@ -1,26 +1,38 @@
-import neutrlPhoto from '../assets/neutral.png'
-import PercentPhoto from '../assets/100perent.png'
-
-
 export default function Who_We_Are() {
-   return (
-      <>
-         {/* Who We Are Section */}
-         <section className="py-16 px-4">
-            <div className="container mx-auto text-center max-w-3xl">
-               <h2 className="text-3xl font-bold mb-8">Who We Are</h2>
-               <p className="text-gray-600 mb-12">
-                  <b>Go Super Foods</b> is a pioneering brand dedicated to delivering optimum health through premium
-                  dietary supplements. Specializing in Moringa capsules, we harness the power of nature to provide you
-                  with a convenient and effective way to nourish your body. Our commitment to quality ensures that
-                  each capsule is packed with the pure goodness of Moringa's vitamins, minerals, and antioxidants.
-               </p>
-               <div className="flex justify-center space-x-12">
-                  <img src={neutrlPhoto} alt="Premium Quality" className="w-1/4 h-1/4 pr-10 float-left" />
-                  <img src={PercentPhoto} alt="Natural Ingredients" className="w-1/4 h-1/4 pl-10 float-right" />
-               </div>
+  return (
+    <div className="min-h-screen flex items-center bg-green-50">
+      <div className="container mx-auto px-4">
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="relative">
+            <img 
+              src="/src/assets/go-superfoods logo.webp" 
+              alt="Go Superfoods Logo"
+              className="w-3/4 mx-auto md:w-full animate-float"
+            />
+          </div>
+          <div className="space-y-6">
+            <h2 className="text-5xl md:text-6xl font-bold text-green-800">
+              Who We Are
+            </h2>
+            <div className="space-y-6 text-lg text-gray-700">
+              <p className="leading-relaxed">
+                At Go Superfoods, we're more than just a food-tech startup—we're
+                passionate advocates for health, wellness, and sustainability.
+              </p>
+              <p className="leading-relaxed">
+                Founded on the belief that everyone deserves access to nutrient-rich
+                superfoods, our mission is to positively impact global health one
+                meal at a time.
+              </p>
             </div>
-         </section>
-      </>
-   )
+            <button
+              className="bg-green-700 text-white px-10 py-4 rounded-xl hover:bg-green-800 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+            >
+              Discover Our Story →
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 }
