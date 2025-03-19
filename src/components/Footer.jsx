@@ -21,8 +21,7 @@ function Footer() {
                </div>
             </div>
             <div className='text-dark-600 p-4 pt-10'>
-               <p>© 2025, Go Super Foods Powered by Bank 'O' Bima -
-                  Refund policy</p>
+               <p>© 2025, Go Super Foods Powered by Bank 'O' Bima </p>
             </div>
          </section>
       </div>
