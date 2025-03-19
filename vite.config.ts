@@ -7,4 +7,8 @@ export default defineConfig({
   optimizeDeps: {
     exclude: ['lucide-react'],
   },
+  base: './',  // Ensures relative path for assets after deployment
+  build: {
+    assetsDir: 'assets', // Explicitly sets the assets directory
+  },
 });
