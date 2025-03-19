@@ -46,55 +46,18 @@ function Navbar() {
 
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center space-x-6 font-semibold text-gray-800">
-          <Link to="/products" className="hover:text-green-900">Products</Link>
+          {/* <Link to="/products" className="hover:text-green-900">Products</Link> */}
 
           {/* About Us Dropdown */}
-          <div className="relative group">
-            <button
-              onClick={() => setDropdownOpen(!isDropdownOpen)}
-              className="hover:text-green-900 inline-flex items-center"
-            >
-              About Us <ChevronDown size={18} className="ml-1"/>
-            </button>
-            <div className={`absolute mt-2 bg-white shadow-lg rounded-md transition duration-200 ease-in-out ${
-              isDropdownOpen ? "opacity-100 visible" : "opacity-0 invisible"
-            }`}>
-              <Link className="block px-4 py-2 hover:bg-green-100" to="/sustainability">
-                Sustainability
-              </Link>
-              <Link className="block px-4 py-2 hover:bg-green-100" to="/sustainability-strategy">
-                Sustainability strategy
-              </Link>
-              <Link className="block px-4 py-2 hover:bg-green-100" to="/our-commitments">
-                Our commitments
-              </Link>
-              <Link className="block px-4 py-2 hover:bg-green-100" to="/policies-reports">
-                Policies and reports
-              </Link>
-            </div>
-          </div>
+          <Link to="/about-us" className="hover:text-green-900">About Us</Link>
 
           <Link to="/community" className="hover:text-green-900">Community</Link>
-          <Link to="/newsletter" className="text-green-600 font-bold hover:text-green-900">Newsletter</Link>
-          <Link to="/contact" className="text-green-700 hover:text-green-900">Contact Us</Link>
+<Link to="/newsletter" className="text-black hover:text-green-900">Newsletter</Link>
+<Link to="/contact" className="text-black hover:text-green-900">Contact Us</Link>
         </div>
 
         {/* Icons & Mobile Menu Button */}
         <div className="flex items-center space-x-4">
-          <button className="hover:text-green-900 transition">
-            <Search size={22} />
-          </button>
-          <Link to="/login" className="hover:text-green-900 transition">
-            <User size={22} />
-          </Link>
-          <button className="relative hover:text-green-900 transition" onClick={toggleCart}>
-            <ShoppingCart size={22} />
-            {cartItems.length > 0 && (
-              <span className="absolute -top-1 -right-2 bg-green-700 text-white rounded-full w-5 h-5 text-xs flex items-center justify-center">
-                {cartItems.length}
-              </span>
-            )}
-          </button>
           <button className="md:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}>
             {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
           </button>
@@ -117,8 +80,8 @@ function Navbar() {
           <X size={28} />
         </button>
         <div className="mt-16 flex flex-col space-y-5 px-6 font-medium">
-          <Link to="/products" onClick={() => setIsMenuOpen(false)}>Products</Link>
-          <Link to="/about" onClick={() => setIsMenuOpen(false)}>About Us</Link>
+          {/* <Link to="/products" onClick={() => setIsMenuOpen(false)}>Products</Link> */}
+          <Link to="/about-us" onClick={() => setIsMenuOpen(false)}>About Us</Link>
           <Link to="/community" onClick={() => setIsMenuOpen(false)}>Community</Link>
           <Link to="/newsletter" onClick={() => setIsMenuOpen(false)}>Newsletter</Link>
           <Link to="/contact" onClick={() => setIsMenuOpen(false)}>Contact Us</Link>
