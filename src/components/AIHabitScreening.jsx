@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import aiAssistantImage from '../assets/ai-assistant.png';
 
 function AIHabitScreening() {
   return (
@@ -19,7 +20,7 @@ function AIHabitScreening() {
             <div className="absolute inset-0 bg-gradient-to-br from-gradient-start to-gradient-end rounded-full blur-md opacity-30 animate-pulse"></div>
             <div className="relative bg-gradient-to-br from-gradient-start to-gradient-end rounded-full p-1">
               <img
-                src="/src/assets/ai-assistant.png"
+                src={aiAssistantImage}
                 alt="AI Assistant"
                 className="w-32 h-32 md:w-40 md:h-40 object-cover rounded-full shadow-xl animate-float"
               />

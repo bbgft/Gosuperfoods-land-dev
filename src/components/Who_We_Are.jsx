@@ -1,3 +1,5 @@
+import logoImage from '../assets/go-superfoods logo.webp';
+
 export default function Who_We_Are() {
   return (
     <div className="min-h-screen flex items-center bg-green-50">
@@ -5,7 +7,7 @@ export default function Who_We_Are() {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="relative">
             <img 
-              src="/src/assets/go-superfoods logo.webp" 
+              src={logoImage}
               alt="Go Superfoods Logo"
               className="w-3/4 mx-auto md:w-full animate-float"
             />

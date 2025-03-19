@@ -1,11 +1,12 @@
 import { Link } from 'react-router-dom';
+import bgImage from '../assets/bg.webp';
 
 function HeroSection() {
   return (
     <div className="relative h-screen">
       <div className="absolute inset-0">
         <img
-          src="/src/assets/bg.webp"
+          src={bgImage}
           alt="Empowering a Healthier World"
           className="w-full h-full object-cover"
         />
