@@ -1,35 +1,35 @@
-import logoImage from '../assets/go-superfoods logo.webp';
+import logoImage from "../assets/go-superfoods logo.webp";
 
 export default function Who_We_Are() {
   return (
-    <div className="min-h-screen flex items-center bg-green-50">
-      <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="relative">
-            <img 
-              src={logoImage}
-              alt="Go Superfoods Logo"
-              className="w-3/4 mx-auto md:w-full animate-float"
-            />
-          </div>
-          <div className="space-y-6">
-            <h2 className="text-5xl md:text-6xl font-bold text-green-800">
-              Who We Are
-            </h2>
-            <div className="space-y-6 text-lg text-gray-700">
-              <p className="leading-relaxed">
-                At Go Superfoods, we're more than just a food-tech startup—we're
-                passionate advocates for health, wellness, and sustainability.
-              </p>
-              <p className="leading-relaxed">
-                Founded on the belief that everyone deserves access to nutrient-rich
-                superfoods, our mission is to positively impact global health one
-                meal at a time.
-              </p>
-            </div>
-            <button
-              className="bg-green-700 text-white px-10 py-4 rounded-xl hover:bg-green-800 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
-            >
+    <div className=" bg-green-50 flex items-center py-12 px-4">
+      <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+        {/* Image Section */}
+        <div className="flex justify-center md:justify-end">
+          <img
+            src={logoImage}
+            alt="Go Superfoods Logo"
+            className="w-64 md:w-80 lg:w-96 animate-float drop-shadow-xl"
+          />
+        </div>
+
+        {/* Content Section */}
+        <div className="text-center md:text-left space-y-6">
+          <h2 className="text-4xl sm:text-5xl font-extrabold text-green-800 leading-tight">
+            Who We Are
+          </h2>
+          <p className="text-gray-700 text-lg leading-relaxed">
+            At <strong>Go Superfoods</strong>, we're more than a food-tech
+            startup—we're passionate advocates for wellness, sustainability, and
+            mindful living.
+          </p>
+          <p className="text-gray-700 text-lg leading-relaxed">
+            Our journey started with one goal: to make nutrient-dense superfoods
+            accessible to all. Today, we proudly drive global health change—one
+            meal at a time.
+          </p>
+          <div>
+            <button className="bg-green-700 hover:bg-green-800 text-white font-semibold px-8 py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-2xl">
               Discover Our Story →
             </button>
           </div>

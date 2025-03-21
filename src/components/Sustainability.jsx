@@ -1,57 +1,60 @@
-import { FaLeaf, FaHandsHelping, FaRecycle } from 'react-icons/fa';
+import { FaLeaf, FaHandsHelping, FaRecycle } from "react-icons/fa";
 
 export default function Sustainability() {
+  const features = [
+    {
+      icon: <FaHandsHelping className="w-12 h-12 text-green-600" />,
+      title: "Supporting Local Farmers",
+      desc: "We partner directly with local farmers to ensure fair trade practices and empower rural communities.",
+    },
+    {
+      icon: <FaLeaf className="w-12 h-12 text-green-600" />,
+      title: "Carbon-Neutral Production",
+      desc: "Our eco-conscious processes minimize emissions while promoting a cleaner, greener planet.",
+    },
+    {
+      icon: <FaRecycle className="w-12 h-12 text-green-600" />,
+      title: "Biodiversity Protection",
+      desc: "We take active steps to protect the ecosystems and biodiversity of our sourcing regions.",
+    },
+  ];
+
   return (
-    <div className="min-h-screen flex items-center bg-green-50">
-      <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center mb-12 text-green-600">
-          Sustainability & Ethical Sourcing
+    <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-green-100 py-20 px-6 flex items-center justify-center">
+      <div className="max-w-7xl mx-auto text-center">
+        <h2 className="text-4xl md:text-5xl font-extrabold text-green-700 mb-6">
+          🌍 Sustainability & Ethical Sourcing
         </h2>
-        
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {/* Local Farmers Card */}
-          <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
-            <div className="text-green-600 mb-4">
-              <FaHandsHelping className="w-12 h-12 mx-auto" />
-            </div>
-            <h3 className="text-2xl font-semibold text-center mb-4">
-              Supporting Local Farmers
-            </h3>
-            <p className="text-gray-600 text-center">
-              We partner directly with local farmers to ensure fair trade practices and support local communities.
-            </p>
-          </div>
+        <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto mb-14">
+          At Go Superfoods, sustainability isn't just a commitment — it's
+          embedded in everything we do, from farm to fork.
+        </p>
 
-          {/* Carbon Neutral Card */}
-          <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
-            <div className="text-green-600 mb-4">
-              <FaLeaf className="w-12 h-12 mx-auto" />
+        <div className="grid gap-10 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 px-4">
+          {features.map((feature, idx) => (
+            <div
+              key={idx}
+              className="bg-white/70 backdrop-blur-md border border-green-100 rounded-xl p-8 shadow-md hover:shadow-xl transform transition-all duration-300 hover:-translate-y-1 hover:scale-[1.03]"
+            >
+              <div className="flex justify-center items-center mb-6">
+                <div className="bg-green-100 p-4 rounded-full shadow-sm">
+                  {feature.icon}
+                </div>
+              </div>
+              <h3 className="text-xl font-semibold text-green-800 mb-3">
+                {feature.title}
+              </h3>
+              <p className="text-gray-700 text-base leading-relaxed">
+                {feature.desc}
+              </p>
             </div>
-            <h3 className="text-2xl font-semibold text-center mb-4">
-              Carbon-Neutral Production
-            </h3>
-            <p className="text-gray-600 text-center">
-              Our production processes are designed to minimize carbon footprint and offset emissions.
-            </p>
-          </div>
-
-          {/* Biodiversity Card */}
-          <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
-            <div className="text-green-600 mb-4">
-              <FaRecycle className="w-12 h-12 mx-auto" />
-            </div>
-            <h3 className="text-2xl font-semibold text-center mb-4">
-              Biodiversity Protection
-            </h3>
-            <p className="text-gray-600 text-center">
-              We actively work to protect and preserve biodiversity in our sourcing regions.
-            </p>
-          </div>
+          ))}
         </div>
 
-        <div className="mt-12 text-center">
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            At Go Superfoods, we prioritize sustainable and eco-friendly sourcing to deliver high-quality products while protecting our planet.
+        <div className="mt-16 text-center">
+          <p className="text-md md:text-lg text-gray-700 max-w-2xl mx-auto">
+            Together, we’re building a future where health, fairness, and
+            environmental care go hand in hand.
           </p>
         </div>
       </div>

@@ -1,70 +1,77 @@
-import { Link } from 'react-router-dom';
-import aiAssistantImage from '../assets/ai-assistant.png';
+import { Link } from "react-router-dom";
+import aiAssistantImage from "../assets/ai-assistant.png";
 
 function AIHabitScreening() {
+  const features = [
+    {
+      title: "Personalized AI Analysis",
+      desc: "Receive a detailed, AI-driven nutrition report tailored specifically for your unique habits.",
+      icon: "🧠",
+    },
+    {
+      title: "Identify Nutritional Gaps",
+      desc: "Uncover missing nutrients and discover superfoods that align with your wellness goals.",
+      icon: "🧬",
+    },
+    {
+      title: "Clear Recommendations",
+      desc: "Get simple, science-backed suggestions to instantly improve your food choices.",
+      icon: "📋",
+    },
+    {
+      title: "Achieve Your Health Goals",
+      desc: "Boost your immunity, energy, and overall health through targeted food habit insights.",
+      icon: "🚀",
+    },
+  ];
+
   return (
-    <div className="min-h-screen flex items-center bg-green-50">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-green-50 via-white to-green-100 px-4 py-20">
       <div className="container mx-auto text-center">
-        <h2 className="text-3xl font-bold mb-3 text-green-600">
+        <h2 className="text-4xl md:text-5xl font-extrabold mb-4 text-green-700">
           🥗 AI-Powered Food Habit Screening
         </h2>
-        <h3 className="text-xl font-medium mb-4 text-gray-700">
+        <h3 className="text-xl md:text-2xl font-medium text-gray-700 mb-6">
           Get Personalized Insights to Optimize Your Nutrition
         </h3>
-        <p className="mb-6 max-w-2xl mx-auto text-gray-600 text-sm">
-          Not sure if your food habits are meeting your nutritional needs? Our advanced AI-powered screening evaluates your diet, identifies nutritional gaps, and creates a personalized nutrition improvement plan.
+        <p className="max-w-2xl mx-auto text-gray-600 text-base md:text-lg leading-relaxed mb-10">
+          Wondering if your current eating habits are actually supporting your
+          health? Our intelligent screening tool uses AI to analyze your food
+          patterns and generate a tailored nutrition plan—just for you.
         </p>
 
-        <div className="relative flex flex-col items-center justify-center py-8 space-y-6 md:space-y-0">
-          <div className="relative">
-            <div className="absolute inset-0 bg-gradient-to-br from-gradient-start to-gradient-end rounded-full blur-md opacity-30 animate-pulse"></div>
-            <div className="relative bg-gradient-to-br from-gradient-start to-gradient-end rounded-full p-1">
-              <img
-                src={aiAssistantImage}
-                alt="AI Assistant"
-                className="w-32 h-32 md:w-40 md:h-40 object-cover rounded-full shadow-xl animate-float"
-              />
-            </div>
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(255,255,255,0.1)_0%,_transparent_70%)] pointer-events-none"></div>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12 md:mt-0 md:justify-center md:items-center">
-            <div className="bg-gray-100 rounded-xl p-4 shadow-lg transform hover:scale-105 hover:shadow-xl transition-all duration-300 relative md:w-60">
-              <div className="absolute -left-3 top-1/2 transform -translate-y-1/2 w-0 h-0 border-t-8 border-t-transparent border-b-8 border-b-transparent border-r-8 border-r-gray-100"></div>
-              <h4 className="text-brand-blue font-bold text-xl mb-3">Personalized AI Analysis</h4>
-              <p className="text-base text-dark-gray leading-relaxed">
-                Receive a detailed, AI-driven nutrition report personalized for you.
-              </p>
-            </div>
-
-            <div className="bg-gray-100 rounded-xl p-4 shadow-lg transform hover:scale-105 hover:shadow-xl transition-all duration-300 relative md:w-60">
-              <div className="absolute -right-3 top-1/2 transform -translate-y-1/2 w-0 h-0 border-t-8 border-t-transparent border-b-8 border-b-transparent border-l-8 border-l-gray-100"></div>
-              <h4 className="text-brand-blue font-bold text-xl mb-3">Identify Nutritional Gaps</h4>
-              <p className="text-base text-dark-gray leading-relaxed">
-                Discover missing nutrients and superfoods your diet needs.
-              </p>
-            </div>
-
-            <div className="bg-gray-100 rounded-xl p-4 shadow-lg transform hover:scale-105 hover:shadow-xl transition-all duration-300 relative md:w-60">
-              <div className="absolute -left-3 top-1/2 transform -translate-y-1/2 w-0 h-0 border-t-8 border-t-transparent border-b-8 border-b-transparent border-r-8 border-r-gray-100"></div>
-              <h4 className="text-brand-blue font-bold text-xl mb-3">Clear Recommendations</h4>
-              <p className="text-base text-dark-gray leading-relaxed">
-                Get easy-to-follow nutritional advice tailored precisely to you.
-              </p>
-            </div>
-
-            <div className="bg-gray-100 rounded-xl p-4 shadow-lg transform hover:scale-105 hover:shadow-xl transition-all duration-300 relative md:w-60">
-              <div className="absolute -right-3 top-1/2 transform -translate-y-1/2 w-0 h-0 border-t-8 border-t-transparent border-b-8 border-b-transparent border-l-8 border-l-gray-100"></div>
-              <h4 className="text-brand-blue font-bold text-xl mb-3">Achieve Your Health Goals</h4>
-              <p className="text-base text-dark-gray leading-relaxed">
-                Boost your energy and immunity with targeted nutritional guidance.
-              </p>
-            </div>
+        {/* AI Assistant Image */}
+        <div className="flex justify-center mb-14">
+          <div className="relative w-36 h-36 md:w-44 md:h-44 rounded-full bg-gradient-to-br from-green-200 to-green-400 p-1 shadow-lg animate-float">
+            <img
+              src={aiAssistantImage}
+              alt="AI Assistant"
+              className="rounded-full w-full h-full object-cover shadow-xl"
+            />
           </div>
         </div>
 
+        {/* Features Grid */}
+        <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 max-w-6xl mx-auto mb-16">
+          {features.map((feature, idx) => (
+            <div
+              key={idx}
+              className="bg-white/70 backdrop-blur-md rounded-xl p-6 shadow-md hover:shadow-xl transform transition-all hover:-translate-y-1 hover:scale-105 border border-green-100"
+            >
+              <div className="text-4xl mb-4 text-green-600">{feature.icon}</div>
+              <h4 className="text-lg font-semibold text-green-800 mb-2">
+                {feature.title}
+              </h4>
+              <p className="text-sm text-gray-700 leading-relaxed">
+                {feature.desc}
+              </p>
+            </div>
+          ))}
+        </div>
+
+        {/* CTA Button */}
         <Link to="/nutrition-report">
-              <button className="bg-green-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-700 transition-all duration-300 transform hover:scale-105 shadow-md">
+          <button className="bg-green-600 text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-green-700 transition-all duration-300 transform hover:scale-105 shadow-lg">
             Request Your AI Nutrition Report →
           </button>
         </Link>
