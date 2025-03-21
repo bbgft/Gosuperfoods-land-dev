@@ -1,5 +1,5 @@
-import { Link } from 'react-router-dom';
-import bgImage from '../assets/bg.webp';
+import { Link } from "react-router-dom";
+import bgImage from "../assets/bg.webp";
 
 function HeroSection() {
   return (
@@ -31,7 +31,9 @@ function HeroSection() {
 
           <div className="mt-8 inline-block bg-black bg-opacity-50 px-6 py-4 rounded">
             <p className="italic text-lg md:text-xl text-white shadow-lg">
-              We are dedicated to providing nutritious superfoods that positively impact your health and well-being—making it accessible to everyone, every day.
+              We are dedicated to providing nutritious superfoods that
+              positively impact your health and well-being—making it accessible
+              to everyone, every day.
             </p>
           </div>
         </div>
